@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Dedeco's JavaScript</title>
+    </head>
+    <body>
+
+        <script>
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+                };
+
+                function formaFrase(cidade, uf, bairro, rua, num){
+                    var frase = 'O usuário mora em ' + cidade + ' / ' + uf + ', no bairro ' + bairro +
+                                ', na rua "' + rua + '" com nº ' + num + '.';
+                    return frase;
+                }
+
+                var frase = formaFrase(endereco.cidade, endereco.uf, endereco.bairro, endereco. rua, endereco.numero);
+
+            console.log(frase);
+        </script>
+    </body>
+</html>>

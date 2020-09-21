@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Dedeco's JavaScript</title>
+    </head>
+    <body>
+        <div id="app">
+            
+        </div>
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var ulElement = document.createElement('ul');
+
+            for (var i = 0; i < nomes.length; i++){
+                var listElement = document.createElement('li');
+                listElement.appendChild(document.createTextNode(nomes[i]));    
+                ulElement.appendChild(listElement);       
+            }
+                                
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(ulElement);            
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Dedeco's JavaScript</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome">
+            <button class='botao' onclick="adicionar()" >Adicionar</button>
+        
+        </div>
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var ulElement = document.createElement('ul');
+
+            var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('.botao');
+            var containerElement = document.querySelector('#app');
+                        
+            for (var i = 0; i < nomes.length; i++){
+                    var listElement = document.createElement('li');
+                    listElement.appendChild(document.createTextNode(nomes[i]));    
+                    ulElement.appendChild(listElement);       
+                }           
+            containerElement.appendChild(ulElement);                     
+            
+            function adicionar(){
+                var text = inputElement.value;
+                nomes.push(text);
+                listElement = document.createElement('li');
+                listElement.appendChild(document.createTextNode(nomes[nomes.length-1]));
+                ulElement.appendChild(listElement); 
+                inputElement.value='';  
+            }                     
+        
+        </script>
+    </body>
+</html>

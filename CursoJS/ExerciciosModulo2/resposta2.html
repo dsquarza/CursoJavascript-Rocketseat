@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Dedeco's JavaScript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class='botao'>Cria quadrado!</button>
+        </div>
+        <script>
+            
+            var btnElement = document.querySelector('.botao');
+            
+            btnElement.onclick = function(){
+                var boxElement = document.createElement("div");
+    
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+                boxElement.onmouseover = function(){                    
+                    boxElement.style.backgroundColor = newColor;
+                    newColor = getRandomColor();
+                }
+                
+                var containerElement = document.querySelector('#app');
+                containerElement.appendChild(boxElement);     
+               
+            }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            var newColor = getRandomColor(); // #E943F0 
+        
+        </script>
+    </body>
+</html>

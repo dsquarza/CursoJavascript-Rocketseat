@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Dedeco's JavaScript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class='botao'>Cria quadrado!</button>
+        </div>
+        <script>
+            
+            var btnElement = document.querySelector('.botao');
+            
+            btnElement.onclick = function(){
+                var boxElement = document.createElement("div");
+    
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = "#f00";
+
+                var containerElement = document.querySelector('#app');
+                containerElement.appendChild(boxElement);
+                
+            } 
+            
+        </script>
+    </body>
+</html>

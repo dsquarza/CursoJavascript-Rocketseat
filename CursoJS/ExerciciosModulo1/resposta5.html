@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Dedeco's JavaScript</title>
+    </head>
+    <body>
+
+        <script>
+            var usuarios = [
+                {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                },
+                {
+                nome: "André",
+                habilidades: ["Guitarra", "Violão", "Contra-Baixo"]
+                }
+                ];
+                
+          
+          function formaFrase(vet){
+            for (let value of vet){
+                console.log("O " + value.nome + " possui as habilidades: " + value.habilidades.join(', '));
+            }
+          }
+          
+          formaFrase(usuarios);
+        </script>
+    </body>
+</html>>

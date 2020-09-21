@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Dedeco's JavaScript</title>
+    </head>
+    <body>
+
+        <script>
+            function temHabilidade(skills) {
+                var busca = skills.indexOf("Javascript");
+                var retorno = (busca > -1) ? true : false ;
+                console.log(retorno);
+            }
+            
+            var skills = ["ReactJS","Javascript", "React Native"];
+            
+            temHabilidade(skills); // true ou false
+
+        </script>
+    </body>
+</html>>
